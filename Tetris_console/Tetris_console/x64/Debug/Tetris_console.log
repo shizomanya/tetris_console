@@ -1,0 +1,3 @@
+﻿  Tetris_console.cpp
+C:\Users\User\Desktop\Tetris_console\Tetris_console\Tetris_console.cpp(73,13): warning C4101: massiv2: неиспользованная локальная переменная
+  Tetris_console.vcxproj -> C:\Users\User\Desktop\Tetris_console\x64\Debug\Tetris_console.exe
