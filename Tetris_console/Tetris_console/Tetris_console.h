@@ -1,0 +1,9 @@
+void Draw();
+void SetFig();
+void DeleteFig();
+void MoveFig();
+bool MoveDown();
+void Rotaite();
+bool CheckLine();
+bool EndGame();
+bool Game();
