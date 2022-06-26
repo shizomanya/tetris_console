@@ -50,7 +50,8 @@ public:
         }
         printf("\xC0\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xD9"); 
     } //Нижние раницы рамки
-/* функция создает фигуру */
+/* на вход принимает переменную Cash и генерирует на его основе фигуру  
+падающую сверху */
     void SetFig(int mass[4][2]) { //создаем фигуру
         for (int i = 0; i < 4; i++)
         {
