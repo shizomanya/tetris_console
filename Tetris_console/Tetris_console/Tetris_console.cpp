@@ -28,7 +28,7 @@ public:
                          {0,0,0,0,0,0,0,0,0,0},
                          {0,0,0,0,0,0,0,0,0,0},
     };
-
+/* функция рисует на экране консоли поле для самой игры */
     void Draw() { //Верхние раницы рамки
         printf("\xDA\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xBF  SCORE:%d\n", score);
         for (int i = 0; i < 20; i++) {
@@ -50,21 +50,21 @@ public:
         }
         printf("\xC0\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xC4\xD9"); 
     } //Нижние раницы рамки
-
+/* функция создает фигуру */
     void SetFig(int mass[4][2]) { //создаем фигуру
         for (int i = 0; i < 4; i++)
         {
             Cash[mass[i][1]][mass[i][0]] = 1;
         }
     }
-
+/* функция удаляет фигуру, точнее уже не принимает фигуру за движущийся объект */
     void DeleteFig(int mass[4][2]) { //удаляем фигуру
         for (int i = 0; i < 4; i++)
         {
             Cash[mass[i][1]][mass[i][0]] = 0;
         }
     }
-
+/* функция отвечает за движение фигуры, точнее за ее границы, чтобы она не уходила за них */
     void MoveFig(int mass[4][2], int dx = 0, int dy = 0) {
         int massiv2[4][2];
 
@@ -116,7 +116,7 @@ public:
         SetFig(mass);
         return true;
     }
-
+/* функция отвечает за поворот фигуры */
     void Rotaite(int mass[4][2]) { //разворот фигуры
         DeleteFig(mass);
         int RotateX = mass[1][0]; // указываем центр вращения для X
@@ -149,7 +149,7 @@ public:
             mass[i][0] = RotateX - x;
         }
     }
-
+/* функция удаляет заполненную линию, построенную из фигур в ходе игры */
     bool CheckLine(int mass[4][2]) { //удаление заполненной линии 
 
         for (int i = 0; i < 4; i++) {
@@ -187,7 +187,7 @@ public:
         return true;
     }
 
-
+/* функция отвечает за конец игры, очищение экрана и вывод итогового окна с результатом */
     bool EndGame() { //конец игры
 
         for (int i = 0; i < 20; i++) {
